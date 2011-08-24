@@ -1,0 +1,50 @@
+<html debug="true"> <head> <title> repo.js test </title>
+<script type="text/javascript" src="repo.js"></script>
+<script type="text/javascript">
+
+window.w={init:undefined,say:undefined,script:undefined,div:undefined};
+
+w.init = function() {
+    w.div = document.createElement('div');
+    var _body = document.getElementsByTagName('body')[0];
+    _body.appendChild(w.div);
+    w.say('author', 'dan langford');
+    w.say('');
+    
+    w.say("DEMO w/FirebugLite...")
+    //add
+    var _resp = repo.add({"catalog":[{"name":"FirebugLite", "url":"https://getfirebug.com/firebug-lite.js"}]});
+    w.say(_resp);
+    //list
+    _resp = repo.list();
+    w.say(_resp);
+    //install
+    _resp = repo.install('FirebugLite');
+    w.say(_resp);
+    
+    w.say('');
+    w.say('i want to increase my repo catalog ... trying to add a few more libs');
+    repo.script('repo.jsonp');
+    w.say('now in the Firebug Lite console down there type this command:');
+    w.say('repo.list()');
+    w.say('');
+    w.say('now install the functional goodness with this command:');
+    w.say('repo.install("FunctionalJS")');
+    w.say('and test it by running this command in the console:');
+    w.say("Functional.map('x*x', [1,2,3,4])");
+}
+
+w.say = function() {
+    var _text = '';
+    for (var i = 0; i < arguments.length; i++) {
+        _text += arguments[i] + ' ';
+    }
+    w.div.appendChild(document.createTextNode(_text));
+    w.div.appendChild(document.createElement('br'));
+}
+
+window.onload = w.init;
+
+</script>
+</head> <body> repo.js test </body>
+</html>

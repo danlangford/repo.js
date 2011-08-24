@@ -1,0 +1,5 @@
+repo.add({"catalog":[
+    { "name":"jQuery", "url":"http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" },
+    { "name":"zepto.js", "url":"http://zeptojs.com/javascripts/zepto.min.js" },
+    { "name":"FunctionalJS", "url":"http://osteele.com/sources/javascript/functional/functional.min.js" }
+]});

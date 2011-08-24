@@ -1,6 +1,6 @@
 window.repo = window.repo || (function() {
     
-    var repo = {catalog1:[],catalog2:{},add:undefined,list:undefined,install:undefined,script:undefined};
+    var repo = {catalog1:[],catalog2:{},add:undefined,list:undefined,install:undefined,script:undefined,log:undefined};
     
     repo.add = function(data) {
         var _catalog = data.catalog;
@@ -9,27 +9,24 @@ window.repo = window.repo || (function() {
             // TODO decide which catalog i like better
             repo.catalog1.push(_entry);
             repo.catalog2[_entry.name] = _entry;
-            // i cant rely on console existing...
-            if(console !== undefined && console.log !== undefined) {
-                console.log('added: '+_entry.name +' @ '+ _entry.url);
-            }
+            //
+            repo.log('added: '+_entry.name +' @ '+ _entry.url);
         }
         return "entries added to catalog: "+n;
     };
     
     repo.list = function(){
-        var _text = '';
+        var _list = [];
         for (var i = 0, n = repo.catalog1.length; i<n; i++) {
             var _entry = repo.catalog1[i];
-            // i cant rely on console existing...
-            if(console !== undefined && console.log !== undefined) {
-                console.log('lib: '+_entry.name +' @ '+ _entry.url);
-            }
-            // so maybe i somehow use _text?
-            _text+='lib: '+_entry.name +' @ '+ _entry.url;
+            // so maybe i somehow use _list?
+            _list.push('lib: '+_entry.name +' @ '+ _entry.url);
+
+            //
+            repo.log('lib: '+_entry.name +' @ '+ _entry.url);
         }
-        // TODO decide how, if at all, to use _text
-        return "total entries in catalog: "+ n ;
+        // TODO decide how, if at all, to use _list
+        return "total entries in catalog: "+ n;
     };
     
     repo.install = function(lib) {
@@ -49,6 +46,15 @@ window.repo = window.repo || (function() {
         _head.appendChild(_script);
         return 'loaded ' + url;
     };
+
+    // TODO investigate FF firebug lite issue
+    // these logs dont appear in FirebugLite in Firefox
+    // but they do appear in FirebugLite in Chrome
+    repo.log = function() {
+        if(console !== undefined && console.log !== undefined) {
+            console.log.apply(console,arguments)
+        }
+    }
 
     return repo;
     

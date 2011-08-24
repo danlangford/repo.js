@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html debug="true"> <head> <title> repo.js test </title>
-<script type="text/javascript" src="repo.js"></script>
+<script type="text/javascript" src="https://raw.github.com/danlangford/repo.js/master/repo.js"></script>
 <script type="text/javascript">
 
 window.w={init:undefined,say:undefined,script:undefined,div:undefined};
@@ -25,7 +25,9 @@ w.init = function() {
     
     w.say('');
     w.say('i want to increase my repo catalog ... trying to add a few more libs');
-    repo.script('repo.jsonp');
+
+    repo.script('https://raw.github.com/danlangford/repo.js/master/repo.jsonp');
+    
     w.say('now in the Firebug Lite console down there type this command:');
     w.say('repo.list()');
     w.say('');

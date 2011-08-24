@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+
+  <title>danlangford/repo.js @ GitHub</title>
+
+  <style type="text/css">
+    body {
+      margin-top: 1.0em;
+      background-color: #477b0c;
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+      color: #ffffff;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+    h1 { font-size: 3.8em; color: #b884f3; margin-bottom: 3px; }
+    h1 .small { font-size: 0.4em; }
+    h1 a { text-decoration: none }
+    h2 { font-size: 1.5em; color: #b884f3; }
+    h3 { text-align: center; color: #b884f3; }
+    a { color: #b884f3; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+    pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+  </style>
+</head>
+
+<body>
+  <a href="http://github.com/danlangford/repo.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <div id="container">
+
+    <div class="download">
+      <a href="http://github.com/danlangford/repo.js/zipball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+      <a href="http://github.com/danlangford/repo.js/tarball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    </div>
+
+    <h1><a href="http://github.com/danlangford/repo.js">repo.js</a>
+      <span class="small">by <a href="http://github.com/danlangford">danlangford</a></span></h1>
+
+    <div class="description">
+      repo.js provides a structure to catalog JS repositories, and install JS libs on the fly
+    </div>
+
+    <p>the idea here is that you could use your browsers console as sort of a command line interface to your environment.
+this specific piece, repo.js, sets forth some ideas around populating a local repository,
+browsing and searching your repo, and loading scripts from your repo into your current environment for use. 
+
+repo.add( {"catalog":[{"name":"myLibName","url":"http://my.lib.com/min.js"}]} );
+
+repo.list()
+
+repo.install('myLibName')
+
+in these tools we will FAVOR dislaying content to the console as if it where a command line.
+to facilitate that all functions should return a summary String so that it appears in the console
+also functions will use console.log, hopefully in a manner that wont blow up
+
+the lib itself, repo.js, will not modify the DOM in anyway
+
+things to consider:
+    adding version numbers and min identifiers to the catalog
+    look at patterns that already exist in CDNs like ajax.googleapis.com
+        (http://code.google.com/apis/libraries/devguide.html#Libraries)
+</p><h2>Dependencies</h2>
+<p>maybe the existence of a console.log() though i attempt to not blow up</p>
+<h2>Install</h2>
+<p>just use <script> for now</p>
+<h2>License</h2>
+<p>im not sure yet</p>
+<h2>Authors</h2>
+<p>dan L (danlangford@gmail.com)<br/><br/>      </p>
+<h2>Contact</h2>
+<p>dan L (danlangford@gmail.com)<br/>      </p>
+
+
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/danlangford/repo.js/zipball/master">zip</a> or
+      <a href="http://github.com/danlangford/repo.js/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/danlangford/repo.js</pre>
+    </p>
+
+    <div class="footer">
+      get the source code on GitHub : <a href="http://github.com/danlangford/repo.js">danlangford/repo.js</a>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>

@@ -1,5 +1,20 @@
 repo.add({"catalog":[
-    { "name":"jQuery", "url":"http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" },
+
+    { "name":"chrome-frame","url":"https://ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"},
+    { "name":"dojo","url":"https://ajax.googleapis.com/ajax/libs/dojo/1.6.1/dojo/dojo.xd.js"},
+    { "name":"ext-core","url":"https://ajax.googleapis.com/ajax/libs/ext-core/3.1.0/ext-core.js"},
+    { "name":"jquery", "url":"http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" },
+    { "name":"jqueryui","url":"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"},
+    { "name":"mootools","url":"https://ajax.googleapis.com/ajax/libs/mootools/1.3.2/mootools-yui-compressed.js"},
+    { "name":"prototype","url":"https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"},
+    { "name":"scriptaculous","url":"https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"},
+    { "name":"swfobject","url":"https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"},
+    { "name":"yui","url":"https://ajax.googleapis.com/ajax/libs/yui/3.3.0/build/yui/yui.js"},
+    { "name":"webfont","url":"https://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js"},
+
     { "name":"zepto.js", "url":"http://zeptojs.com/javascripts/zepto.min.js" },
     { "name":"FunctionalJS", "url":"http://osteele.com/sources/javascript/functional/functional.min.js" }
+
+    
+
 ]});

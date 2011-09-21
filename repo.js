@@ -1,14 +1,12 @@
 window.repo = window.repo || (function() {
     
-    var repo = {catalog1:[],catalog2:{},add:undefined,list:undefined,load:undefined,script:undefined,log:undefined};
+    var repo = {catalog:{},add:undefined,list:undefined,load:undefined,script:undefined,log:undefined};
     
     repo.add = function(data) {
         var _catalog = data.catalog;
         for (var i = 0, n = _catalog.length; i<n; i++) {
             var _entry = _catalog[i];
-            // TODO decide which catalog i like better
-            repo.catalog1.push(_entry);
-            repo.catalog2[_entry.name] = _entry;
+            repo.catalog[_entry.name] = _entry;
             //
             repo.log('added: '+_entry.name +' @ '+ _entry.url);
         }
@@ -16,22 +14,18 @@ window.repo = window.repo || (function() {
     };
     
     repo.list = function(){
-        var _list = [];
-        for (var i = 0, n = repo.catalog1.length; i<n; i++) {
-            var _entry = repo.catalog1[i];
-            // so maybe i somehow use _list?
-            _list.push('lib: '+_entry.name +' @ '+ _entry.url);
-
-            //
+        var n=0;
+        for (var i in repo.catalog) {
+            n++;
+            var _entry = repo.catalog[i];
             repo.log('lib: '+_entry.name +' @ '+ _entry.url);
         }
-        // TODO decide how, if at all, to use _list
         return "total entries in catalog: "+ n;
     };
     
     repo.load = function(lib) {
-        if(repo.catalog2[lib] !== undefined) {
-            return repo.script(repo.catalog2[lib].url);
+        if(repo.catalog[lib] !== undefined) {
+            return repo.script(repo.catalog[lib].url);
         } else {
             return "undefined lib";
         }

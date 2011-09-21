@@ -12,8 +12,11 @@ repo.add({"catalog":[
     { "name":"yui","url":"https://ajax.googleapis.com/ajax/libs/yui/3.3.0/build/yui/yui.js"},
     { "name":"webfont","url":"https://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js"},
 
-    { "name":"zepto.js", "url":"http://zeptojs.com/javascripts/zepto.min.js" },
-    { "name":"FunctionalJS", "url":"http://osteele.com/sources/javascript/functional/functional.min.js" }
+    { "name":"zepto", "url":"http://zeptojs.com/javascripts/zepto.min.js" },
+    { "name":"FunctionalJS", "url":"http://osteele.com/sources/javascript/functional/functional.min.js" },
+
+    { "name":"backbone", "url":"http://documentcloud.github.com/backbone/backbone.js" },
+    { "name":"spine", "url":"http://maccman.github.com/spine/spine.min.js" }
 
     
 

@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html debug="true"> <head> <title> repo.js test </title>
 <script type="text/javascript" src="https://raw.github.com/danlangford/repo.js/master/repo.js"></script>
-<<<<<<< HEAD
-<!--
-<script type="text/javascript" src="repo.js"></script>
--->
-=======
 <!--<script type="text/javascript" src="repo.js"></script>-->
->>>>>>> updated for new api
 <script type="text/javascript">
 
 window.w={init:undefined,say:undefined,script:undefined,div:undefined};
@@ -34,24 +28,13 @@ w.init = function() {
     w.say('i want to add libs to your repo catalog run a command like this:');
 
     w.runMeLink("repo.script('https://raw.github.com/danlangford/repo.js/master/repo.jsonp')");
-<<<<<<< HEAD
-/*
-    w.runMeLink("repo.script('repo.jsonp')");
-*/
-=======
 //    w.runMeLink("repo.script('repo.jsonp')");
->>>>>>> updated for new api
 
     w.say('then in the Firebug Lite console down there type this command:');
     w.runMeLink('repo.list()');
     w.say('');
-<<<<<<< HEAD
-    w.say('now install the functional goodness with this command:');
-    w.runMeLink("repo.install('FunctionalJS')");
-=======
     w.say('now load the functional goodness with this command:');
     w.runMeLink("repo.load('FunctionalJS')");
->>>>>>> updated for new api
     w.say('and test it by running this command in the console:');
     w.runMeLink("Functional.map('x*x', [1,2,3,4])");
 }

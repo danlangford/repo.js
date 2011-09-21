@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html debug="true"> <head> <title> repo.js test </title>
-<!--<script type="text/javascript" src="https://raw.github.com/danlangford/repo.js/master/repo.js"></script>-->
-<script type="text/javascript" src="repo.js"></script>
+<script type="text/javascript" src="https://raw.github.com/danlangford/repo.js/master/repo.js"></script>
+<!--<script type="text/javascript" src="repo.js"></script>-->
 <script type="text/javascript">
 
 window.w={init:undefined,say:undefined,script:undefined,div:undefined};
@@ -28,9 +28,7 @@ w.init = function() {
     w.say('i want to add libs to your repo catalog run a command like this:');
 
     w.runMeLink("repo.script('https://raw.github.com/danlangford/repo.js/master/repo.jsonp')");
-/*
-    w.runMeLink("repo.script('repo.jsonp')");
-*/
+//    w.runMeLink("repo.script('repo.jsonp')");
 
     w.say('then in the Firebug Lite console down there type this command:');
     w.runMeLink('repo.list()');

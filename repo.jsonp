@@ -15,9 +15,11 @@ repo.add({"catalog":[
     { "name":"zepto", "url":"http://zeptojs.com/javascripts/zepto.min.js" },
     { "name":"FunctionalJS", "url":"http://osteele.com/sources/javascript/functional/functional.min.js" },
 
-    { "name":"backbone", "url":"http://documentcloud.github.com/backbone/backbone.js" },
-    { "name":"spine", "url":"http://maccman.github.com/spine/spine.min.js" }
+    { "name":"backbone", "url":"http://documentcloud.github.com/backbone/backbone-min.js" },
+    { "name":"underscore", "url":"http://documentcloud.github.com/underscore/underscore-min.js" },
+    { "name":"json2", "url":"https://raw.github.com/douglascrockford/JSON-js/master/json2.js" },
 
+    { "name":"spine", "url":"http://maccman.github.com/spine/spine.min.js" },
+    { "name":"spine.ajax", "url":"http://maccman.github.com/spine/lib/spine.ajax.js" }
     
-
 ]});

@@ -1,0 +1,10 @@
+// BACKBONE
+var Cat = Backbone.Model.extend({urlRoot:"/cat"})
+var myCat = new Cat({id:7})
+myCat.save() // fetch(), destroy()
+
+// SPINE
+var Cat = Spine.Model.setup('Cat',['id'])
+Cat.extend(Spine.Model.Ajax)
+var myCat = Cat.init({id:7})
+myCat.save() // or save? update? create? find? fetch? i dont know yet

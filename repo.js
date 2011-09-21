@@ -1,6 +1,6 @@
 window.repo = window.repo || (function() {
     
-    var repo = {catalog1:[],catalog2:{},add:undefined,list:undefined,install:undefined,script:undefined,log:undefined};
+    var repo = {catalog1:[],catalog2:{},add:undefined,list:undefined,load:undefined,script:undefined,log:undefined};
     
     repo.add = function(data) {
         var _catalog = data.catalog;
@@ -29,7 +29,7 @@ window.repo = window.repo || (function() {
         return "total entries in catalog: "+ n;
     };
     
-    repo.install = function(lib) {
+    repo.load = function(lib) {
         if(repo.catalog2[lib] !== undefined) {
             return repo.script(repo.catalog2[lib].url);
         } else {

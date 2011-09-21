@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html debug="true"> <head> <title> repo.js test </title>
-<script type="text/javascript" src="https://raw.github.com/danlangford/repo.js/master/repo.js"></script>
-<!--
+<!--<script type="text/javascript" src="https://raw.github.com/danlangford/repo.js/master/repo.js"></script>-->
 <script type="text/javascript" src="repo.js"></script>
--->
 <script type="text/javascript">
 
 window.w={init:undefined,say:undefined,script:undefined,div:undefined};
@@ -22,8 +20,8 @@ w.init = function() {
     //list
     _resp = repo.list();
     w.say(_resp);
-    //install
-    _resp = repo.install('FirebugLite');
+    //load
+    _resp = repo.load('FirebugLite');
     w.say(_resp);
     
     w.say('');
@@ -37,8 +35,8 @@ w.init = function() {
     w.say('then in the Firebug Lite console down there type this command:');
     w.runMeLink('repo.list()');
     w.say('');
-    w.say('now install the functional goodness with this command:');
-    w.runMeLink("repo.install('FunctionalJS')");
+    w.say('now load the functional goodness with this command:');
+    w.runMeLink("repo.load('FunctionalJS')");
     w.say('and test it by running this command in the console:');
     w.runMeLink("Functional.map('x*x', [1,2,3,4])");
 }
